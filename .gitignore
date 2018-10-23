@@ -1,25 +1,52 @@
-# Compiled class file
-*.class
+.gradle
+build/
 
-# Log file
-*.log
+# Ignore Gradle GUI config
+gradle-app.setting
 
-# BlueJ files
-*.ctxt
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Cache of project
+.gradletasknamecache
 
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# gradle/wrapper/gradle-wrapper.properties
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Compiled class files
+.class
+
+# Log files
+.log
+
+# Package files
+.jar
+.war
+.ear
+.zip
+.tar.gz
+.rar
+
+# Virtual machine crash logs
 hs_err_pid*
 
-# IntelliJ IDEA
+/FindBugs.html
+/FindBugs.xml
+/FindBugs.diff.xml
+/FindBugs.diff.html
+/JUnit.html
+
+.idea/workspace.xml
+.idea/uiDesigned.xml
+.idea/dictionaries
+.idea/findbugs-idea.xml
+.idea/junitgenerator-prj-settings.xml
+.idea/vcs.xml
+.idea/checkstyle-idea.xml
+.idea/ant.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/kotlinc.xml
+out/
+de/
 .idea
