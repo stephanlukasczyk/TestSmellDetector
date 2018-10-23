@@ -27,6 +27,13 @@ public class Main {
             }
         }
 
+        final String outputFile;
+        if (args.length >= 2 && !args[1].isEmpty()) {
+            outputFile = args[1];
+        } else {
+            outputFile = null;
+        }
+
 
         TestSmellDetector testSmellDetector = TestSmellDetector.createTestSmellDetector();
 
@@ -57,7 +64,7 @@ public class Main {
         /*
           Initialize the output file - Create the output file and add the column names
          */
-        ResultsWriter resultsWriter = ResultsWriter.createResultsWriter();
+        ResultsWriter resultsWriter = ResultsWriter.createResultsWriter(outputFile);
         List<String> columnNames;
         List<String> columnValues;
 
