@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+group 'de.uni_passau.fim.infosun.se2'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.github.javaparser', name: 'javaparser-core', version: '3.2.4'
+    compile group: 'com.opencsv', name: 'opencsv', version: '3.9'
+}
+
+jar {
+    archiveName = "${project.name}.jar"
+    manifest {
+        attributes(
+                'Main-Class': 'Main',
+                'Built-By': System.getProperty('user.name'),
+                'Built-Date': new Date(),
+                'Built-JDK': System.getProperty('java.version')
+        )
+    }
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
